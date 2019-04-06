@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/vscode-go.git"
+    "url": "https://github.com/miles-fitzsimons/mercy-console-log.git"
   },
   "categories": [
     "Other"
