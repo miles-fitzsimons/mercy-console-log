@@ -2,7 +2,7 @@
   "name": "mercy-console-log",
   "displayName": "Mercy Console Log",
   "description": "Easy console logging",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "miles-fitzsimons",
   "engines": {
     "vscode": "^1.33.0"
