@@ -11,24 +11,20 @@ export function activate(context: vscode.ExtensionContext) {
       if (!selection.isEmpty) {
         const line = document.lineAt(selection.start.line);
         const lineText = line.text;
-        console.log("extension.ts -> lineText:", lineText);
 
         const whitespace = lineText.substring(
           0,
           line.firstNonWhitespaceCharacterIndex
         );
         const filePath = document.fileName;
-        console.log("extension.ts -> filePath:", filePath);
 
         const fileName = filePath.substring(filePath.lastIndexOf("/") + 1);
-        console.log("extension.ts -> fileName:", fileName);
 
         editor.edit(editBuilder => {
           const word = document.getText(selection);
-          console.log("extension.ts -> word:", word);
           editBuilder.replace(
             line.range,
-            `${lineText}\n${whitespace}console.log('${fileName} -> ${word}:', ${word})`
+            `${lineText}\n${whitespace}console.log('${fileName} -> %c${word}:', 'color: red',${word})`
           );
         });
       }
