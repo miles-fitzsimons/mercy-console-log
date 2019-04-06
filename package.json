@@ -17,7 +17,7 @@
     "keybindings": [
       {
         "command": "extension.log",
-        "key": "ctrl+alt+p",
+        "key": "ctrl+shift+q",
         "when": "editorTextFocus"
       }
     ],
