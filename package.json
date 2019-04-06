@@ -3,6 +3,7 @@
   "displayName": "Mercy Console Log",
   "description": "Easy console logging",
   "version": "0.1.0",
+  "publisher": "miles-fitzsimons",
   "engines": {
     "vscode": "^1.33.0"
   },
