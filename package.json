@@ -9,7 +9,7 @@
   },
   "galleryBanner": {
     "color": "#000000",
-    "theme": "light"
+    "theme": "dark"
   },
   "repository": {
     "type": "git",
