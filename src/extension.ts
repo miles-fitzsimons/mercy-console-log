@@ -7,7 +7,6 @@ export function activate(context: vscode.ExtensionContext) {
     if (editor) {
       const document = editor.document;
       const selection = editor.selection;
-
       if (!selection.isEmpty) {
         const line = document.lineAt(selection.start.line);
         const lineText = line.text;
@@ -24,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
           const word = document.getText(selection);
           editBuilder.replace(
             line.range,
-            `${lineText}\n${whitespace}console.log('${fileName} -> %c${word}:', 'color: red',${word})`
+            `${lineText}\n${whitespace}console.log('${fileName} -> %c${word}:', 'color: red', ${word})`
           );
         });
       }
