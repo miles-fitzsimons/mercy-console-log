@@ -17,7 +17,14 @@ export function activate(context: vscode.ExtensionContext) {
         );
         const filePath = document.fileName;
 
-        const fileName = filePath.substring(filePath.lastIndexOf("/") + 1);
+        let lastSlashIndex = -1;
+        if (filePath.lastIndexOf("/") !== -1) {
+          lastSlashIndex = filePath.lastIndexOf("/");
+        } else if (filePath.lastIndexOf("\\") !== -1) {
+          lastSlashIndex = filePath.lastIndexOf("\\");
+        }
+
+        const fileName = filePath.substring(lastSlashIndex + 1);
 
         editor.edit(editBuilder => {
           const word = document.getText(selection);
@@ -34,3 +41,5 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {}
+
+// it handles \
